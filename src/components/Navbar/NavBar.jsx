@@ -20,6 +20,8 @@ export default function NavBar() {
     <div>
       <AppBar position="fixed" color="secondary" >
         <Toolbar> 
+      <AppBar position="fixed" color="secondary">
+        <Toolbar>
           <Typography variant="h6" color="inherit" className={classes.titulo}>
             RAME Kids
           </Typography>
