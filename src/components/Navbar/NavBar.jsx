@@ -19,7 +19,7 @@ export default function NavBar() {
   const classes = useStyles()
   return (
     <div>
-      <AppBar position="fixed" color="primary">
+      <AppBar position="fixed" color="secondary">
         <Toolbar>
           <Typography variant="h6" color="inherit" className={classes.titulo}>
             RAME Kids
