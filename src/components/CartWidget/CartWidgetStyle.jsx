@@ -11,7 +11,7 @@ export const cartWidgetStyle = theme => {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            color: 'rgba(0, 0, 0, 0.36)',
+            color: '#FDFCC7',
             transition: '1s',
             '&:hover':{
                 color: 'black'
