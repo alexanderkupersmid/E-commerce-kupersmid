@@ -2,24 +2,26 @@ export const itemCountStyle = () => {
     return ({
         itemCountContainer:{
             fontFamily: 'roboto',
+            // border: '1px solid red',
             display:'flex',
             flexFlow: 'column nowrap',
-            rowGap: '2rem',
+            rowGap: '1rem',
             '& > button':{
                 display:'flex',
-                justifyContent:'flex-center',
+                flexFlow:'row nowrap',
+                justifyContent:'flex-start',
                 alignItems:'center',
                 columnGap:'1rem',
                 padding:'0.5rem',
                 fontFamily: 'roboto',
                 width: 'fit-content',
                 backgroundColor: 'transparent',
-                border: '1px solid pink',
+                border: '1px solid black',
                 cursor:'pointer',
                 transition: '0.3s',
                 '&:hover':{
-                    backgroundColor: 'pink',
-                    color:'white'
+                    backgroundColor: '#FAB7D6',
+                    color:'#FDFCC7',
                 }
                 
             }
@@ -34,12 +36,12 @@ export const itemCountStyle = () => {
             flexFlow: 'row nowrap',
             alignItems: 'center',
             justifyContent:'center',
-            border: '2px solid pink',
+            border: '1px solid #d7d7d7',
             '& > div > button':{
                 display:'flex',
                 alignItems:'center',
                 backgroundColor: 'transparent',
-                border: '1px solid pink',
+                border: 'none',
                 cursor: 'pointer',
             },
             '& > span':{

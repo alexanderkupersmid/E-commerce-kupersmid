@@ -1,15 +1,13 @@
 import React from 'react';
-import {ItemListContainer} from './components/ItemList/ItemListContainer';
-import NavBar from './components/NavBar/NavBar';
-import {ThemeProvider} from '@material-ui/core/styles';
-import theme from './themes/temaconfiguracion';
+import {ItemListContainer} from './components/ItemListContainer/ItemListContainer';
+import { NavBar } from './components/NavBar/NavBar';
 
 function App() {
   return (
-    <ThemeProvider>
+    <>
       <NavBar/>
       <ItemListContainer greeting="Prendas"/>
-    </ThemeProvider>
+    </>
    
   )
 }
