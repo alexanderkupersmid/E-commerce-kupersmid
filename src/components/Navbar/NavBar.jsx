@@ -1,37 +1,23 @@
-import React from 'react';
-import {NavBarStyle} from './NavbarStyle';
-import {CartWidget} from '../CartWidget/CartWidget';
-import {Button, AppBar, Toolbar, Typography, makeStyles} from '@material-ui/core';
-import { createMuiTheme } from '@material-ui/core/styles';
+import React from 'react'; 
+import { makeStyles } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
+import { NavBarStyle } from './NavBarStyle';
+import { CartWidget } from '../CartWidget/CartWidget';
 
-//como debo importar el logo desde la carpeta image?
-//probe con ../../image/logo.png pero me dio error.
+const useStyle = makeStyles((theme) => NavBarStyle(theme));
 
-const useStyles = makeStyles(theme=>({
-  offset: theme.mixins.toolbar,
-  titulo:{flexGrow: 1},
-}))
-
-
-
-export default function NavBar() {
-  const classes = useStyles()
-  return (
-    <div>
-      <AppBar position="fixed" color="secondary" >
-        <Toolbar> 
-      <AppBar position="fixed" color="secondary">
-        <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.titulo}>
-            RAME Kids
-          </Typography>
-          <Button variant="text" color="inherit">Home</Button>
-          <Button variant="text" color="inherit">Contact</Button>
-          <CartWidget />
-        </Toolbar>
-      </AppBar>
-    <div className={classes.offset}> </div>
-    
-    </div>
-  )
+export const NavBar = props => {
+    const classes = useStyle()
+    return <>
+        <AppBar className={classes.appBar}>
+            <Toolbar className={classes.toolBar}>
+                <Typography variant='h3' className={classes.title}>
+                    Rame kids
+                </Typography>
+                <Button variant='h4' className={classes.buttons}>home</Button>
+                <Button variant='h4' className={classes.buttons}>contac</Button>
+                <CartWidget/>
+            </Toolbar>
+        </AppBar>
+    </>
 }
